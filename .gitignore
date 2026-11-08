@@ -1,0 +1,135 @@
+# ==============================================================================
+# Gitignore for Object Detection / Computer Vision Thesis Project (phase-0)
+# Covers: YOLOv8, RT-DETR, Gold-YOLO, PyTorch, Datasets, Weights & Runs
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Datasets & Archives (Prevents pushing gigabytes of images & archives)
+# ------------------------------------------------------------------------------
+dataset/
+datasets/
+data/
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# ------------------------------------------------------------------------------
+# 2. Model Weights & Checkpoints (Exceeds GitHub's 100MB file limit)
+# ------------------------------------------------------------------------------
+*.pt
+*.pth
+*.pwf
+*.onnx
+*.engine
+*.bin
+*.safetensors
+*.ckpt
+*.h5
+*.tflite
+*.pb
+
+# ------------------------------------------------------------------------------
+# 3. Virtual Environments
+# ------------------------------------------------------------------------------
+# Project-specific virtual environments
+env-*/
+env-yolo/
+env-rtdetr/
+
+# Standard Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# 4. Ultralytics, Evaluation & Prediction Outputs
+# ------------------------------------------------------------------------------
+# Training/validation run outputs & telemetry
+runs/
+**/runs/
+wandb/
+*.tfevents.*
+
+# Large generated prediction / evaluation dumps
+*predictions*.json
+*mapped_predictions.json
+
+# Keep results directory structure without checking in heavy artifacts
+results/*
+!results/.gitkeep
+
+# ------------------------------------------------------------------------------
+# 5. External Cloned Repositories
+# ------------------------------------------------------------------------------
+# gold-yolo/Efficient-Computing contains an independent .git repository
+gold-yolo/Efficient-Computing/
+
+# ------------------------------------------------------------------------------
+# 6. Python Cache & Build Artifacts
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ------------------------------------------------------------------------------
+# 7. Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------------------------------------------
+# 8. Operating System & IDE Specific Files
+# ------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
